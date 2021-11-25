@@ -1,0 +1,6 @@
+const zero_address = "0x0000000000000000000000000000000000000000"
+
+const erc721_address = "0x82cbb7d65383Cb606C5111db4C999aE50c729253"
+const simpleMarketplace_address = "0x050EcFFBCCb8c7fBACedDbBe649ACcD4a4EB0f42"
+const feeToken_address = "0x8424820269C3B9026e21e6e64ebc1B849280C21A"
+const auction_address = "0xA37737ceE39352e2a93226A66973d4Dff47E1B24"

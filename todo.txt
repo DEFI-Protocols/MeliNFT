@@ -1,0 +1,2 @@
+- Check gas price is loaded correctly
+- what if two people mint in the same time 

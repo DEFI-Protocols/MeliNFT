@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypt Marketplace</title>
+    <link rel="stylesheet" href="static/css/profile.css">
+    <script src="static/js/shared/alertify/alertify.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/stats.js/r11/Stats.js'></script>
+
+    <script src="static/js/shared/abi/erc721.js"></script>
+    <script src="static/js/shared/abi/simpleMarketplace.js"></script>
+    <script src="static/js/shared/abi/auction.js"></script>
+    <script src="static/js/shared/addresses.js"></script>
+    <script src="static/js/shared/wallet.js"></script>
+    <script src="static/js/shared/connect.js"></script>
+    <script src="static/js/shared/functions.js"></script>
+</head>
+<body>
+  <h1 class="title">Crypt</h1>
+  <header>
+    <a class="connect" onclick="connect()">Connect</a>
+    <a class="menue" href="/profile">Profile</a>
+    <a class="menue" href="/create">Create</a>
+    <a class="menue" href="/mynfts">My NFTs</a>
+    <a class="menue" href="/">Marketplace</a>
+  </header>
+  <br><br>
+    <a href="/" class="to-marketplace"><span><img src="static/assets/profile/chevron.png" alt=""></span>Marketplace</a>
+    <main>
+        <div>
+            <div class="upload">
+                <div>
+                    <input type="file" name="file" id="file-upload" accept="image/gif, image/jpeg, image/png, image/jpg" onchange="loadFile(event)">
+                    <label for="file-upload" class="upload-toggle">
+                        <img  src="static/assets/profile/upload.png" alt="">
+                        <p>Choose File</p>
+                        <p class="subheading">
+                            PNG, GIF, JPEG, JPG (max: 8 MB)
+                        </p>
+                    </label>
+                    <img src="" id="profileImage" alt="" class="uploaded-img">
+                </div>
+            </div>
+            <p style="text-align: center;width: 75%;line-height: 24px;margin: 16px auto;">We recommend an image of at least 400x400. Gifs work too.</p>
+        </div>
+        <div class="create-container">
+            <h1 class="section-title">Edit Profile</h1>
+            <div class="name-input">
+                <label for="name" class="subheading">Username</label>
+                <input type="text" name="name" id="name" placeholder="Username">
+            </div>
+            <div class="description-input">
+                <label for="description" class="subheading">Bio</label>
+                <textarea name="description" id="description" maxlength="200" cols="30" rows="10" placeholder="Bio (max: 200 characters)"></textarea>
+            </div>
+
+            <div class="social-input">
+                <label for="name" class="subheading">Social Link ( Facebook, Twitter or Instagram )</label>
+                <input type="text" name="social" id="social" placeholder="https://facebook.com/johndoe">
+                <!-- <p class="social-check"><span style="margin-right: 8px;">!</span> Invalid Link</p> -->
+            </div>
+
+            <button class="update" onclick='edit()'>
+                Update Profile
+            </button>
+        </div>
+    </main>
+    <canvas id="constellations"></canvas>
+    <script src="/static/js/shared/app.js"></script>
+    <script src="static/js/profile.js"></script>
+    <link rel="stylesheet" href="static/css/profile.css">
+</body>
+</html>

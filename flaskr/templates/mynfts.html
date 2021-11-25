@@ -1,0 +1,135 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypt Marketplace</title>
+    <link rel="stylesheet" href="static/css/index.css" type="text/css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/stats.js/r11/Stats.js'></script>
+
+    <script src="static/js/shared/abi/erc721.js"></script>
+    <script src="static/js/shared/abi/simpleMarketplace.js"></script>
+    <script src="static/js/shared/abi/auction.js"></script>
+    <script src="static/js/shared/addresses.js"></script>
+    <script src="static/js/shared/wallet.js"></script>
+    <script src="static/js/shared/connect.js"></script>
+    <script src="static/js/shared/functions.js"></script>
+</head>
+<body>
+  <h1 class="title">Crypt</h1>
+  <header>
+    <a class="connect" onclick="connect()">Connect</a>
+    <a class="menue" href="/profile">Profile</a>
+    <a class="menue" href="/create">Create</a>
+    <a class="menue" href="/mynfts">My NFTs</a>
+    <a class="menue" href="/">Marketplace</a>
+  </header>
+  <br><br>
+    <main>
+        <div class="hot-deals">
+            <h1 style="text-align: center;">Listed</h1>
+            <div class="deals">
+
+            </div>
+        </div>
+
+        <div class="hot-deals">
+            <h1 style="text-align: center;">Auctions</h1>
+            <div class="auctions">
+
+            </div>
+        </div>
+
+        <div class="marketplace">
+            <h1>Others</h1>
+
+            <div class="nfts">
+
+            </div>
+        </div>
+
+    </main>
+
+    <template>
+        <div class="listedNft">
+            <img src="" alt="" class="nft-image">
+            <div class="nft-info">
+                <div class="text-start">
+                    <p class="category"></p>
+                    <p class="nft-name"></p>
+                    <p class="nft-id"></p>
+                </div>
+                <div class="text-end">
+                    <p class="price">Price</p>
+                    <p class="nft-price"></p>
+                    <a class="menue" onclick="item(this)">details</a>
+                </div>
+            </div>
+            <div class="buy-section">
+
+                <button class="buy" onclick="unlist(this)">delist</button>
+            </div>
+            <div class="likes">
+                <p class="likecount"></p>
+                <img src="static/assets/index/unliked.png" alt="" class="like">
+            </div>
+        </div>
+    </template>
+
+    <template>
+        <div class="auctionsNft">
+            <img src="" alt="" class="nft-image">
+            <div class="nft-info">
+                <div class="text-start">
+                    <p class="category"></p>
+                    <p class="nft-name"></p>
+                    <p class="nft-id"></p>
+                </div>
+                <div class="text-end">
+                    <p class="price">Current bid</p>
+                    <p class="nft-price"></p>
+                    <a class="menue" onclick="item(this)">details</a>
+                </div>
+            </div>
+            <div class="buy-section">
+
+                <button class="buy" onclick="unlistAuction(this)">delist</button>
+            </div>
+            <div class="likes">
+                <p class="likecount"></p>
+                <img src="static/assets/index/unliked.png" alt="" class="like">
+            </div>
+        </div>
+    </template>
+
+    <template>
+        <div class="nft">
+            <img src="" alt="" class="nft-image">
+            <div class="nft-info">
+                <div class="text-start">
+                    <p class="category"></p>
+                    <p class="nft-name"></p>
+                </div>
+
+                <p class="nft-id"></p>
+
+            </div>
+            <div class="buy-section">
+
+                <div class="input-group">
+                  <button class="buy" onclick="list(this)" data-arg1='1234'>List </button>
+                </div>
+            </div>
+            <div class="likes">
+                <p class="likecount"></p>
+                <img src="static/assets/index/unliked.png" alt="" class="like">
+            </div>
+        </div>
+    </template>
+    <canvas id="constellations"></canvas>
+    <script src="/static/js/shared/app.js"></script>
+    <script src="static/js/mynfts.js"></script>
+</body>
+</html>

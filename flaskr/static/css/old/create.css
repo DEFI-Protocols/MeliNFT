@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+:root{
+    --background-color: #151515;
+    --main-color: white;
+    --second-color: #9e9e9e;
+    --like-color: #f95757;
+    --hover-color: #1f1f1f;
+    --top-artist: #221e3d;
+    --accent-color: #222831;
+    --active-color: #a72693;
+    --nft-background: #0c0c0c;
+    --margin-xs: 8px;
+    --margin-s: 16px;
+    --margin-m: 24px;
+    --margin-l: 32px;
+    --margin-xl: 40px;
+    --margin-xxl: 64px;
+    --margin-special: 72px;
+    --font-regular: 400;
+    --font-medium: 500;
+}
+body{
+    margin: 0;
+    background: var(--background-color);
+    font-family: Roboto, "sans-serif", 'Segoe UI', -apple-system;
+    padding: 48px 164px;
+    color: var(--main-color);
+    max-width: 100vw;
+    overflow-x: hidden;
+    height: 100%;
+}
+header{
+    margin-bottom: 48px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+header>h1{
+    font-size: 32px;
+    font-weight: var(--font-medium);
+    margin-right: var(--margin-xl);
+}
+
+.loading{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  /* background: url('//upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Phi_fenomeni.gif/50px-Phi_fenomeni.gif')
+              50% 50% no-repeat rgb(249,249,249); */
+}
+
+.menue{
+    /* border: 1px solid var(--main-color); */
+    padding: 12px 24px;
+    margin-left: auto;
+    display: block;
+    color: var(--main-color);
+    background: none;
+    font-family: Roboto, "sans-serif", 'Segoe UI', -apple-system;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: 250ms ease-in-out;
+    cursor: pointer;
+}
+.input{
+    padding: 16px 0 16px 24px;
+    background: var(--accent-color);
+    width: 432px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    color: var(--main-color);
+    font-family: Roboto, "sans-serif", 'Segoe UI', -apple-system;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    height: max-content;
+    margin-right: 16px;
+}
+
+.input input{
+    background: none;
+    outline: none;
+    border: none;
+    color: var(--main-color);
+    margin-left: 12px;
+    width: 90%;
+}
+
+.connect{
+    border: 1px solid var(--main-color);
+    padding: 12px 24px;
+    margin-left: auto;
+    display: block;
+    color: var(--main-color);
+    background: none;
+    font-family: Roboto, "sans-serif", 'Segoe UI', -apple-system;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: 250ms ease-in-out;
+    cursor: pointer;
+}
+
+.connect:hover{
+    background: var(--main-color);
+    color: black;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.buy{
+    padding: 12px 40px;
+    border: 1px solid white;
+    border-radius: 4px;
+    color: white;
+    background: transparent;
+    display: block;
+    margin: 16px 0;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+}
+
+input[type="number"], input[type="text"], textarea{
+    background: none;
+    outline: none;
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 8px;
+    appearance: textfield;
+    color: white;
+    padding: 16px 24px;
+    display: block;
+    width: 200px;
+    margin: 12px 0;
+    margin-right: 16px;
+}
+
+input, textarea{
+    font-family: Roboto, "sans-serif", 'Segoe UI', -apple-system;
+}
+
+#searchbar{
+    border: none;
+    margin: 0;
+    width: unset;
+    padding: 0;
+}
+
+.create-container{
+    background: #0c0c0c;
+    padding: 40px 56px;
+    width: max-content;
+    border-radius: 16px;
+    margin-right: 64px;
+}
+
+.create-container>div{
+    margin: 32px 0;
+}
+
+.create-container, .upload{
+    margin-top: 32px;
+}
+
+#description{
+    width: 480px;
+    height: 144px;
+    min-width: 480px;
+    max-width: 480px;
+    max-height: 280px;
+    min-height: 120px;
+}
+
+.price{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 8px;
+    color: white;
+    padding: 8px 0 8px 16px;
+    width: 275px;
+    margin: 12px 0;
+    margin-right: 16px;
+}
+
+.price>p{
+    margin: 8px 16px 8px 0;
+}
+
+.price>input{
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.summary{
+    width: 275px;
+}
+
+.summary>div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.mint{
+    background: transparent;
+    outline: none;
+    color: white;
+    border: 1px solid white;
+    transition: 250ms ease-in-out;
+    padding: 16px 64px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.mint:hover{
+    background: white;
+    color: black;
+}
+
+.buy:hover{
+    background: white;
+    color: black;
+}
+
+.buy-section{
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.subheading{
+    opacity: 0.3;
+    margin-bottom: 8px !important;
+}
+
+.uploaded-img{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.has-upload{
+    display: block;
+}
+
+.label-upload-success{
+    opacity: 0;
+    position: relative;
+    z-index: 4;
+}
+
+.upload{
+    background: #0c0c0c;
+    padding: 16px;
+    height: max-content;
+    border-radius: 16px;
+}
+
+.upload>div{
+    background: #252525;
+    padding: 32px 16px;
+    border-radius: 16px;
+    width: 320px;
+    padding-bottom: 48px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.upload-toggle>img{
+    margin: 8px auto 24px;
+    display: block;
+}
+
+input[type="file"]{
+    display: none;
+}
+
+.upload>div>label>p{
+    text-align: center;
+}
+
+.upload-toggle>img{
+    cursor: pointer;
+}
+
+.to-marketplace{
+    color: rgba(255,255,255,.5);
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+.to-marketplace>span{
+    display: inline-block;
+    margin-right: 16px;
+}
+
+
+@media screen and (max-width: 1384px){
+    main{
+        flex-direction: column-reverse;
+    }
+    .create-container, .upload{
+        margin: 0 auto;
+    }
+    .upload{
+        margin-bottom: 32px;
+    }
+    .upload>div{
+        width: 380px;
+        height: 190px;
+    }
+}
+
+@media screen and (max-width: 1046px){
+    .info-container, .nft-image-container{
+        width: 100%;
+    }
+    .input{
+        margin-left: auto;
+    }
+    .connect{
+        margin: 16px auto;
+    }
+    input[type="number"]{
+        width: 45%;
+    }
+    header{
+        margin-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 960px){
+    body{
+        padding: 32px 80px;
+    }
+
+    .create-container, .upload{
+        margin: 32px auto;
+    }
+
+    .create-container{
+        width: 100%;
+    }
+
+    #description{
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
+}

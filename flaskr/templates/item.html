@@ -1,0 +1,166 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypt Marketplace</title>
+    <link rel="stylesheet" href="../static/css/item.css" type="text/css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/stats.js/r11/Stats.js'></script>
+
+    <script src="../static/js/shared/abi/erc721.js"></script>
+    <script src="../static/js/shared/abi/simpleMarketplace.js"></script>
+    <script src="../static/js/shared/abi/auction.js"></script>
+    <script src="../static/js/shared/addresses.js"></script>
+    <script src="../static/js/shared/wallet.js"></script>
+    <script src="../static/js/shared/connect.js"></script>
+    <script src="../static/js/shared/functions.js"></script>
+    <script>
+      let id = {{id}}
+    </script>
+</head>
+<body>
+  <h1 class="title">Crypt</h1>
+  <header>
+    <a class="connect" onclick="connect()">Connect</a>
+    <a class="menue" href="/profile">Profile</a>
+    <a class="menue" href="/create">Create</a>
+    <a class="menue" href="/mynfts">My NFTs</a>
+    <a class="menue" href="/">Marketplace</a>
+  </header>
+  <br><br>
+
+    <main>
+        <div class="container">
+            <div class="nft-image-container">
+                <img src="" alt="nft-image" class="nft-image">
+                <div class="preview-toggle">
+                    <img src="../static/assets/item/magnify.png" alt="">
+                    <p>Preview</p>
+                </div>
+            </div>
+            <div class="info-container">
+                <div class="item-heading">
+                    <div class="">
+                        <h3 class="nft-name" ></h3>
+                        <!-- <p>Exo Collection 14/200</p> -->
+                    </div>
+                    <div class="likes">
+                        <p class="likecount"></p>
+                        <img src="../static/assets/item/unliked.png" alt="" class="like">
+                    </div>
+                </div>
+                <div class="price-container">
+                    <p class="price"></p>
+
+                </div>
+                <div class="description">
+                    <p class="description-text"></p>
+                </div>
+                <div class="creator">
+                    <p class="subheading">
+                        Creator
+                    </p>
+                    <div>
+                        <img src="" alt="" class="creator-img">
+                        <p class="creator-name"></p>
+                    </div>
+
+                </div>
+                <!-- <div class="contract-id">
+                    <p class="subheading">Transaction ID</p>
+                    <p class="id-contract"></p>
+                </div> -->
+                <div class="nft-id">
+                    <p class="subheading">NFT ID</p>
+                    <p class="id-nft"></p>
+                </div>
+                <div id="buy-section">
+                  <!-- <button class="buy" onclick="offer(this)">Buy</button> -->
+                </div>
+                <!-- <div class="nft-nav">
+                    <p class="nft-nav-item active-item">Item</p>
+                    <p class="nft-nav-item">Description</p>
+                    <p class="nft-nav-item">Info</p>
+                </div>
+                <div class="displayed-tab">
+
+                </div> -->
+            </div>
+        </div>
+      </br>
+      </br>
+        <!-- <div class="transaction-history">
+            <h1>Transaction History</h1>
+            <div class="transactions">
+
+            </div>
+        </div> -->
+    </main>
+    <div class="modal">
+        <p class="modal-quit">X</p>
+        <img src="" alt="" class="nft-image">
+    </div>
+
+    <template>
+        <div class="item">
+            <div class="price-container">
+                <p class="price"></p>
+                <!-- <div class="sale">
+                    <img src="../static/assets/item/clock.png" alt="">
+                    <p>Sale ending in 5 minutes</p>
+                </div> -->
+            </div>
+            <!-- <div class="buy-section">
+                <input type="number" name="price-offer" id="" placeholder="0.8 BNB">
+                <input type="number" name="copies" id="" placeholder="Number of copies">
+            </div>
+            <button class="buy">Buy</button> -->
+        </div>
+    </template>
+
+    <template>
+        <div class="description">
+            <p class="description-text"></p>
+        </div>
+    </template>
+
+    <template>
+        <div class="info">
+            <div class="creator">
+                <p class="subheading">
+                    Creator
+                </p>
+                <div>
+                    <img src="" alt="" class="creator-img">
+                    <p class="creator-name"></p>
+                </div>
+
+            </div>
+            <div class="contract-id">
+                <p class="subheading">Transaction ID</p>
+                <p class="id-contract"></p>
+            </div>
+            <div class="nft-id">
+                <p class="subheading">NFT ID</p>
+                <p class="id-nft"></p>
+            </div>
+        </div>
+    </template>
+
+    <!-- <template>
+        <div class="transaction">
+            <p class="date"></p>
+            <p class="action"></p>
+            <p class="source"></p>
+            <p class="buyer"></p>
+            <p class="price"></p>
+            <p class="copies"></p>
+        </div>
+    </template> -->
+    <canvas id="constellations"></canvas>
+    <script src="/static/js/shared/app.js"></script>
+    <script src="../static/js/item.js"></script>
+</body>
+</html>

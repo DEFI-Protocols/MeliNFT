@@ -1,0 +1,34 @@
+@import "theme";
+@import "forms";
+
+main {
+  flex-wrap: nowrap;
+  flex-direction: row;
+  @media screen and (max-width: 1300px) {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+
+#searchbar {
+  border: none;
+  margin: 0;
+  width: unset;
+  padding: 0;
+}
+
+.social-check {
+  opacity: 0.7;
+  padding: 0;
+  margin: 8px 0 0 0;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.social-check-valid {
+  max-height: 24px;
+}
+
+.description-input {
+  margin: 24px 0;
+}
